@@ -10,7 +10,7 @@ Coursework and Git practice for COMP3104.
 
 
 
-- Created the comp3104 directory in my home directory.
+- Created the COMP3104 directory in my home directory.
 
 - Initialized a local Git repository.
 
