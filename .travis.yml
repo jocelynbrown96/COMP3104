@@ -1,10 +1,28 @@
 language: node_js
 node_js:
-  - "stable"
+  - "24"
+
+branches:
+  only:
+    - main
+    - dep-inclusions
+
+cache:
+  directories:
+    - ~/.npm
+
+install:
+  - npm ci
+
+script:
+  - npm run build
+  - cp build/index.html build/404.html
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
+  keep_history: true
   on:
     branch: main
